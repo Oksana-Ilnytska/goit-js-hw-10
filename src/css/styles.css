@@ -31,7 +31,6 @@
 
 .timer {
   display: flex;
-  
   align-items: center;
   gap: 20px;
 }
@@ -53,11 +52,28 @@ button[data-start] {
   transition: background-color 0.3s ease;
 }
 
+button {
+  background-color: #4E75FF;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
 button[data-start]:enabled {
   background-color: #4E75FF;
 }
 
-button[data-start]:enabled:hover {
+button[data-start]:disabled {
+  background-color: #CFCFCF;
+  color: #989898;
+}
+
+
+
+button[data-start]:hover {
+  background-color: #6C8CFF;
+}
+
+button:hover {
   background-color: #6C8CFF;
 }
 
@@ -70,9 +86,19 @@ button[data-start]:enabled:hover {
 
 .field {
   display: flex;
-  
+  flex-direction: column; 
   align-items: center;
 }
+
+.field:hover {
+  
+  color: #2E2F42;
+  cursor: pointer;
+}
+
+.field:focus {
+  color: #4E75FF;
+} 
 
 .field .value {
   font-size: 36px;
